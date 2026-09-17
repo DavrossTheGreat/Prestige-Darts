@@ -47,7 +47,7 @@ button{font:inherit}
 .small{color:#aaa;font-size:13px;line-height:1.45}
 .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 
-#tableOverlay{position:absolute;left:2%;top:62.05%;width:96%;height:18.55%;z-index:17;background:#0b0d11;border:2px solid #30343a;border-radius:13px;overflow:hidden}
+#tableOverlay{position:absolute;left:2%;top:68.25%;width:96%;height:11.65%;z-index:17;background:#0b0d11;border:2px solid #30343a;border-radius:13px;overflow:hidden}
 .thead{height:19%;display:flex;align-items:center;justify-content:space-between;padding:0 2.5%;border-bottom:1px solid #3a3d43}
 .thead .title{font-size:clamp(14px,3.8vw,27px);font-weight:900}
 .thead .green{color:#18d66a}
@@ -58,6 +58,39 @@ button{font:inherit}
 .liveTable th:nth-child(2),.liveTable td:nth-child(2){text-align:left}
 .liveTable .rank{display:inline-flex;width:clamp(24px,6vw,40px);height:clamp(24px,6vw,40px);align-items:center;justify-content:center;border-radius:7px;background:#ef2932;color:#fff;font-weight:900}
 .liveTable .pts{color:#ff3038;font-weight:900}
+
+
+/* New feature controls */
+.featureHit{position:absolute;border:2px solid #ef2932;cursor:pointer;z-index:998;background:rgba(8,9,12,.92);touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,39,50,.18);color:#fff;border-radius:11px;font-weight:900;font-size:clamp(11px,2.8vw,19px);text-align:left;padding-left:8%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+#tournamentHit{color:#f3c84b;border-color:#d6a51d}
+#tournamentHit::after{content:"🏆  TOURNAMENT  ›";font-size:inherit}
+#counterHit::after{content:"🎯  DART COUNTER  ›";font-size:inherit}
+.featureHit::before{display:block;font-size:clamp(7px,1.7vw,11px);font-weight:700;color:#9ea3aa;margin-bottom:1px}
+#tournamentHit::before{content:"KNOCKOUT COMPETITION";margin-left:0}
+#counterHit::before{content:"501 • 301 • PRACTICE"}
+#tournamentHit{left:1%;top:61.7%;width:48.5%;height:6.1%}
+#counterHit{right:1%;top:61.7%;width:48.5%;height:6.1%}
+.nextHit{position:absolute;top:42.5%;height:6.2%;border:0;background:transparent;z-index:998;cursor:pointer;touch-action:manipulation}
+#next1{left:5%;width:28%}#next2{left:36%;width:28%}#next3{left:67%;width:28%}
+.viewHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.viewHead h1{margin:0}
+.ghost{background:#15181d;border:1px solid #454a52;color:#fff;border-radius:9px;padding:10px 14px;font-weight:900}
+.redAction{background:#ef2932;color:#fff;border:0;border-radius:10px;padding:12px 16px;font-weight:900}
+.goldAction{background:#d6a51d;color:#08090c;border:0;border-radius:10px;padding:12px 16px;font-weight:900}
+.featureRow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.bracketWrap{overflow-x:auto;padding-bottom:10px}
+.bracket{min-width:920px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:18px;align-items:center}
+.round{display:flex;flex-direction:column;justify-content:space-around;gap:28px;min-height:520px}
+.roundTitle{font-size:13px;color:#ff3342;font-weight:900;text-align:center;letter-spacing:.7px;margin-bottom:8px}
+.match{background:#0c0f13;border:1px solid #41464e;border-radius:12px;padding:10px;position:relative}
+.matchTitle{font-size:11px;color:#aeb2b9;margin-bottom:8px;font-weight:800}
+.slot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 7px;border:1px solid #30353c;border-radius:8px;background:#15181d;margin:4px 0;font-weight:900}
+.slot.win{border-color:#ef2932}.slot button{border:0;background:#ef2932;color:#fff;border-radius:7px;padding:6px 9px;font-weight:900}
+.finalMatch{border-color:#d6a51d}.champion{margin-top:18px;border:2px solid #d6a51d;border-radius:14px;padding:16px;text-align:center;background:linear-gradient(145deg,#15120a,#0b0d11)}
+.champion .cup{font-size:38px}.championName{font-size:28px;color:#f3c84b;font-weight:1000}
+.counterTop{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.playerCard{background:#0c0f13;border:1px solid #3c4149;border-radius:12px;padding:12px;text-align:center}.playerCard .name{font-size:18px;font-weight:900}.bigScore{font-size:44px;font-weight:1000;margin-top:5px}.scoreRed{color:#ff3040}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.keypad button{min-height:52px;background:#1a1e24;border:1px solid #3b4149;color:#fff;border-radius:10px;font-size:19px;font-weight:900}.counterActions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}.statGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.stat{background:#0d1014;border:1px solid #30353c;border-radius:9px;padding:10px}.stat small{display:block;color:#9ea3aa}.stat b{font-size:18px}.checkout{margin-top:12px;border:1px solid #ef2932;border-radius:10px;padding:12px;text-align:center;background:#151014}.gameSelect{display:grid;gap:10px}.modeBtn{background:#11151a;border:1px solid #3d4249;color:#fff;border-radius:10px;padding:15px;text-align:left;font-weight:900;font-size:17px}.modeBtn.active{border-color:#ef2932;background:#3a1015}.fixtureBtn{width:100%;text-align:left;background:#11151a;color:#fff;border:1px solid #3b4047;border-radius:10px;padding:14px;font-weight:900}
+@media(max-width:560px){.featureHit{height:6.2%}.bracket{min-width:860px}.panel{padding:12px}.panel h1{font-size:22px}.bigScore{font-size:38px}}
 
 </style>
 </head>
@@ -89,6 +122,11 @@ button{font:inherit}
   <button class="hit" id="today" onclick="openView('today');return false" onpointerup="openView('today');return false"></button>
   <button class="hit" id="week" onclick="openView('week');return false" onpointerup="openView('week');return false"></button>
   <button class="hit" id="rules" onclick="openView('rules');return false" onpointerup="openView('rules');return false"></button>
+  <button class="featureHit" id="tournamentHit" aria-label="Open Tournament" onclick="openView('tournament');return false"></button>
+  <button class="featureHit" id="counterHit" aria-label="Open Dart Counter" onclick="openView('counter');return false"></button>
+  <button class="nextHit" id="next1" aria-label="Start next up game 1" onclick="startNext(0);return false"></button>
+  <button class="nextHit" id="next2" aria-label="Start next up game 2" onclick="startNext(1);return false"></button>
+  <button class="nextHit" id="next3" aria-label="Start next up game 3" onclick="startNext(2);return false"></button>
   <button class="hit" id="home" onclick="goHome();return false" onpointerup="goHome();return false"></button>
   <button class="hit" id="navLeague" onclick="openView('league');return false" onpointerup="openView('league');return false"></button>
   <button class="hit" id="navToday" onclick="openView('today');return false" onpointerup="openView('today');return false"></button>
@@ -187,20 +225,109 @@ function renderHome(){
     </table>`;
 }
 
+function escapeHtml(x){return String(x).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function startNext(index){
+  if(state.live){openView('today');return}
+  const games=remaining();
+  if(games[index]) startGame(games[index].id);
+}
+function seededPlayers(){
+  const s=stats();
+  return PLAYERS.slice().sort((a,b)=>s[b].pts-s[a].pts||s[b].w-s[a].w||a.localeCompare(b));
+}
+function tournamentData(){
+  const p=seededPlayers();
+  const qf={a:p[3]||'TBD',b:p[4]||'TBD'};
+  const sf1={a:p[0]||'TBD',b:'QF WINNER'};
+  const sf2={a:p[1]||'TBD',b:p[2]||'TBD'};
+  return {p,qf,sf1,sf2,final:{a:'SF1 WINNER',b:'SF2 WINNER'}};
+}
+function startTournamentMatch(round){
+  const t=tournamentData();
+  let a,b;
+  if(round==='qf'){a=t.qf.a;b=t.qf.b}
+  if(round==='sf1'){a=t.sf1.a;b=state.tournament?.qfWinner||'QF WINNER'}
+  if(round==='sf2'){a=t.sf2.a;b=t.sf2.b}
+  if(round==='final'){a=state.tournament?.sf1Winner||'SF1 WINNER';b=state.tournament?.sf2Winner||'SF2 WINNER'}
+  if(!a||!b||b.includes('WINNER')||a.includes('WINNER')) return;
+  counterMode(501,a,b,{round});
+}
+function finishCounterMatch(side){
+  const winner=side===0?counter.p1:counter.p2;
+  if(counterMatch){
+    state.tournament=state.tournament||{};
+    if(counterMatch.round==='qf')state.tournament.qfWinner=winner;
+    if(counterMatch.round==='sf1')state.tournament.sf1Winner=winner;
+    if(counterMatch.round==='sf2')state.tournament.sf2Winner=winner;
+    if(counterMatch.round==='final')state.tournament.champion=winner;
+    save();counterMatch=null;counter.started=false;pendingScore='';renderTournament();return;
+  }
+  counter.started=false;pendingScore='';renderCounter();
+}
+function renderTournament(){
+  const v=document.getElementById('view');v.className='show';
+  const t=tournamentData();
+  const qfWinner=state.tournament?.qfWinner||'QF WINNER';
+  const sf1Winner=state.tournament?.sf1Winner||'SF1 WINNER';
+  const sf2Winner=state.tournament?.sf2Winner||'SF2 WINNER';
+  const champ=state.tournament?.champion||'';
+  v.innerHTML=`<div class="panel">
+    <div class="viewHead"><button class="ghost" onclick="goHome();return false">‹ BACK</button><h1>🏆 TOURNAMENT</h1><span></span></div>
+    <p class="small">Seeded automatically from the current league standings. Higher league position receives the higher seed.</p>
+    <div class="bracketWrap"><div class="bracket">
+      <div class="round"><div><div class="roundTitle">QUARTER-FINAL</div><div class="match"><div class="matchTitle">4th vs 5th</div><div class="slot">${escapeHtml(t.qf.a)}</div><div class="slot">${escapeHtml(t.qf.b)}</div><button class="redAction" style="width:100%;margin-top:7px;padding:8px" onclick="startTournamentMatch('qf');return false">🎯 PLAY MATCH</button></div></div></div>
+      <div class="round"><div><div class="roundTitle">SEMI-FINAL 1</div><div class="match"><div class="matchTitle">1st vs QF Winner</div><div class="slot">${escapeHtml(t.sf1.a)}</div><div class="slot">${escapeHtml(qfWinner)}</div><button class="redAction" style="width:100%;margin-top:7px;padding:8px" onclick="startTournamentMatch('sf1');return false">🎯 PLAY MATCH</button></div></div></div>
+      <div class="round"><div><div class="roundTitle">FINAL</div><div class="match finalMatch"><div class="matchTitle">Championship Final</div><div class="slot">${escapeHtml(sf1Winner)}</div><div class="slot">${escapeHtml(sf2Winner)}</div><button class="goldAction" style="width:100%;margin-top:7px;padding:8px" onclick="startTournamentMatch('final');return false">🏆 PLAY FINAL</button></div></div></div>
+      <div class="round"><div><div class="roundTitle">SEMI-FINAL 2</div><div class="match"><div class="matchTitle">2nd vs 3rd</div><div class="slot">${escapeHtml(t.sf2.a)}</div><div class="slot">${escapeHtml(t.sf2.b)}</div><button class="redAction" style="width:100%;margin-top:7px;padding:8px" onclick="startTournamentMatch('sf2');return false">🎯 PLAY MATCH</button></div></div></div>
+      <div class="round"><div><div class="roundTitle">CHAMPION</div><div class="champion"><div class="cup">🏆</div><div class="championName">${escapeHtml(champ||'TBD')}</div><div class="small">PRESTIGE TYRES CHAMPION</div></div></div></div>
+    </div></div>
+    <div class="controls"><button class="redAction" onclick="openView('today');return false">VIEW TODAY'S GAMES</button><button class="ghost" onclick="resetTournament();return false">RESET TOURNAMENT</button></div>
+  </div>`;
+}
+function setTournamentWinner(round,winner){
+  state.tournament=state.tournament||{};
+  if(round==='qf')state.tournament.qfWinner=winner;
+  save();renderTournament();
+}
+function resetTournament(){state.tournament=null;save();renderTournament()}
+let counter={mode:501,p1:'Josh',p2:'Dan',s1:501,s2:501,turn:0,history:[],started:false};
+let counterMatch=null;
+function counterMode(mode,p1='Josh',p2='Dan',context=null){counter={mode,p1,p2,s1:mode===301?301:501,s2:mode===301?301:501,turn:0,history:[],started:true};counterMatch=context;renderCounter()}
+function renderCounter(){
+  const v=document.getElementById('view');v.className='show';
+  if(!counter.started){v.innerHTML=`<div class="panel"><div class="viewHead"><button class="ghost" onclick="goHome();return false">‹ BACK</button><h1>🎯 DART COUNTER</h1><span></span></div><p class="small">Quick scoring for matches and practice. No legs are used in league fixtures.</p><div class="gameSelect"><button class="modeBtn" onclick="counterMode(501)">🎯 501</button><button class="modeBtn" onclick="counterMode(301)">🎯 301</button><button class="modeBtn" onclick="counterMode(0)">🎯 PRACTICE</button></div></div>`;return}
+  if(counter.mode===0){
+    v.innerHTML=`<div class="panel"><div class="viewHead"><button class="ghost" onclick="counter.started=false;renderCounter();return false">‹ BACK</button><h1>🎯 PRACTICE</h1><span></span></div><div class="counterTop"><div class="playerCard"><div class="name">${counter.p1}</div><div class="bigScore scoreRed">${counter.s1}</div></div><div class="playerCard"><div class="name">${counter.p2}</div><div class="bigScore">${counter.s2}</div></div></div><div class="keypad">${[1,2,3,4,5,6,7,8,9,0,25,50].map(n=>`<button onclick="counterThrow(${n});return false">${n}</button>`).join('')}</div><div class="counterActions"><button class="ghost" onclick="counterUndo();return false">↩ UNDO</button><button class="ghost" onclick="counterClear();return false">CLEAR</button><button class="redAction" onclick="counterSwitch();return false">SWITCH</button></div><div class="checkout">Practice mode — current player: <b>${counter.turn===0?counter.p1:counter.p2}</b></div></div>`;return;
+  }
+  const p1avg=counter.history.filter(x=>x.player===0).reduce((a,x)=>a+x.score,0);const p2avg=counter.history.filter(x=>x.player===1).reduce((a,x)=>a+x.score,0);
+  const current=counter.turn===0?counter.p1:counter.p2; const req=counter.turn===0?counter.s1:counter.s2;
+  const checkout=req>170?'No checkout':checkoutText(req);
+  v.innerHTML=`<div class="panel"><div class="viewHead"><button class="ghost" onclick="if(counterMatch){counterMatch=null;counter.started=false;renderTournament()}else{counter.started=false;renderCounter()}return false">‹ BACK</button><h1>${counter.mode} - BEST OF 1</h1><span></span></div><div class="counterTop"><div class="playerCard"><div class="name">${counter.p1}</div><div class="bigScore scoreRed">${counter.s1}</div><div class="small">Throws ${counter.history.filter(x=>x.player===0).length}</div></div><div class="playerCard"><div class="name">${counter.p2}</div><div class="bigScore">${counter.s2}</div><div class="small">Throws ${counter.history.filter(x=>x.player===1).length}</div></div></div><div class="checkout"><b>ENTER SCORE (${current.toUpperCase()})</b><br><span class="small">Requires ${req}${checkout!=='No checkout'?` · Suggested ${checkout}`:''}</span></div><div class="keypad">${[1,2,3,4,5,6,7,8,9,0,25,50].map(n=>`<button onclick="counterAddDigit(${n});return false">${n}</button>`).join('')}</div><div id="pending" class="checkout" style="display:none"></div><div class="counterActions"><button class="ghost" onclick="counterUndo();return false">↩ UNDO</button><button class="ghost" onclick="counterClear();return false">CLEAR</button><button class="redAction" onclick="counterSubmit();return false">SUBMIT</button></div><div class="statGrid"><div class="stat"><small>${counter.p1} total thrown</small><b>${p1avg}</b></div><div class="stat"><small>${counter.p2} total thrown</small><b>${p2avg}</b></div></div></div>`;
+}
+let pendingScore='';
+function counterAddDigit(n){pendingScore+=String(n);document.getElementById('pending').style.display='block';document.getElementById('pending').textContent='Score entered: '+pendingScore}
+function counterClear(){pendingScore='';const el=document.getElementById('pending');if(el){el.style.display='none';el.textContent=''}renderCounter()}
+function counterUndo(){const last=counter.history.pop();if(last){if(last.player===0)counter.s1+=last.score;else counter.s2+=last.score;counter.turn=last.player}pendingScore='';renderCounter()}
+function counterSwitch(){counter.turn=counter.turn===0?1:0;renderCounter()}
+function counterThrow(n){if(counter.mode===0){if(counter.turn===0)counter.s1+=n;else counter.s2+=n;counter.history.push({player:counter.turn,score:n});counterSwitch();}}
+function counterSubmit(){const n=Number(pendingScore);if(!Number.isFinite(n)||n<0||n>180){pendingScore='';return}const side=counter.turn;const before=side===0?counter.s1:counter.s2; if(n>before){pendingScore='';renderCounter();return} if(n===before){counter.history.push({player:side,score:n,checkout:true});if(side===0)counter.s1=0;else counter.s2=0;counter.started=false;renderCounter();return} if(side===0)counter.s1-=n;else counter.s2-=n;counter.history.push({player:side,score:n});counter.turn=side===0?1:0;pendingScore='';renderCounter()}
+function checkoutText(n){const map={170:'T20 T20 Bull',167:'T20 T19 Bull',164:'T20 T18 Bull',161:'T20 T17 Bull',160:'T20 T20 D20',140:'T20 T20 D10',120:'T20 T20 D10',100:'T20 D20',80:'T20 D10',60:'S20 D20',50:'Bull',40:'D20',32:'D16',24:'D12',20:'D10',16:'D8',12:'D6',10:'D5',8:'D4',6:'D3',4:'D2',2:'D1'};return map[n]||'T20 · setup for next dart'}
 function openView(type){
+  if(type==='tournament'){renderTournament();return}
+  if(type==='counter'){counter.started=false;pendingScore='';renderCounter();return}
   const v=document.getElementById('view');v.className='show';
   let title=type==='league'?'🏆 LEAGUE TABLE':type==='today'?'🎯 TODAY\'S GAMES':type==='week'?'📅 FULL WEEK':'📋 RULES';
-  let html=`<div class="panel"><button class="back" onclick="goHome();return false" onpointerup="goHome();return false">‹ BACK</button><h1>${title}</h1>`;
+  let html=`<div class="panel"><div class="viewHead"><button class="back" onclick="goHome();return false" onpointerup="goHome();return false">‹ BACK</button><h1>${title}</h1><span></span></div>`;
   if(type==='today'){
     const f=current();
     if(f) html+=`<div class="game"><b>🔴 LIVE — ${f.a} vs ${f.b}</b><div class="controls"><button class="action" onclick="finishCurrent(0)">🏆 ${f.a} WINS</button><button class="action" onclick="finishCurrent(1)">🏆 ${f.b} WINS</button></div></div>`;
     html+=remaining().map(g=>`<div class="game"><b>${g.a} vs ${g.b}</b><button class="action" onclick="startGame('${g.id}')">START</button></div>`).join('')||'<p class="small">All games have been completed.</p>';
   }else if(type==='league'){
-    const s=stats();html+=PLAYERS.map((p,i)=>`<div class="game"><b>${i+1}. ${p}</b><span>${s[p].pts} pts · ${s[p].w} W · ${s[p].d} D · ${s[p].l} L</span></div>`).join('');
+    const s=stats();const rows=PLAYERS.map(p=>({p,...s[p]})).sort((a,b)=>b.pts-a.pts||b.w-a.w||a.p-b.p||a.p.localeCompare(b.p));html+=rows.map((r,i)=>`<div class="game"><b>${i+1}. ${r.p}</b><span>${r.pts} pts · ${r.w} W · ${r.d} D · ${r.l} L</span></div>`).join('');
   }else if(type==='week'){
     html+=state.fixtures.map((g,i)=>{const r=state.results.find(x=>x.id===g.id);const live=state.live?.id===g.id;return `<div class="game"><b>${i+1}. ${g.a} vs ${g.b}</b><span>${live?'🔴 LIVE':r?'Complete':'Not played'}</span></div>`}).join('');
   }else{
-    html+=`<p class="small">Each fixture is one game. There are no legs. Select a match, then press the trophy beside the winning player's name on the main screen. The winner receives 2 league points.</p>`;
+    html+=`<p class="small">Each fixture is one game. There are no legs. The winner receives 2 league points. Tap any NEXT UP fixture on the home screen to start it immediately.</p>`;
   }
   html+='</div>';v.innerHTML=html;
 }
