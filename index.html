@@ -43,20 +43,20 @@ button{font:inherit}
 #navToday{left:40%;bottom:0;width:20%;height:9.2%;}
 #navWeek{left:60%;bottom:0;width:20%;height:9.2%;}
 #navRules{left:80%;bottom:0;width:20%;height:9.2%;}
-#scoreOverlay{position:absolute;left:7%;top:25.8%;width:86%;height:13.2%;z-index:30;display:none;align-items:center;justify-content:center}
-.playerName{position:absolute;top:47%;width:24%;text-align:center;font-size:clamp(17px,4vw,34px);font-weight:900;text-shadow:0 2px 3px #000;background:#090b0f;padding:1px 4px;line-height:1.1}
+#scoreOverlay{position:absolute;left:7%;top:25.8%;width:86%;height:13.2%;z-index:40;display:none;align-items:center;justify-content:center}
+.playerName{position:absolute;top:43%;width:24%;text-align:center;font-size:clamp(17px,4vw,34px);font-weight:900;text-shadow:0 2px 3px #000;background:#090b0f;padding:1px 4px;line-height:1.1}
 .playerName.left{left:8%;width:24%}
 .playerName.right{right:8%;width:24%}
 .score{font-size:clamp(30px,7vw,58px);font-weight:900;line-height:1;cursor:pointer;pointer-events:auto}.score.liveTap{border:2px solid #ef2932;border-radius:9px;padding:5px 8px;background:#15171b}
 
 .score.liveTap{min-width:12%;background:#15171b;box-shadow:0 0 0 3px #080a0d;}
-.score.left{position:absolute;left:32.5%;top:0%;width:12%;text-align:center}
-.score.right{position:absolute;right:32.5%;top:0%;width:12%;text-align:center}
+.score.left{position:absolute;left:32.5%;top:1.5%;width:12%;text-align:center}
+.score.right{position:absolute;right:32.5%;top:1.5%;width:12%;text-align:center}
 #liveMeta{position:absolute;left:5%;top:27.1%;width:90%;height:4%;z-index:31;display:none;text-align:right;padding-right:3%;font-size:clamp(10px,2.5vw,18px);font-weight:800;color:#bbb}
-#winLeft,#winRight{position:absolute;top:31.0%;width:11%;height:7%;z-index:25;border:0;border-radius:50%;background:transparent;color:transparent;font-size:0;display:none;opacity:0}
+#winLeft,#winRight{position:absolute;top:31.0%;width:11%;height:7%;z-index:45;border:0;border-radius:50%;background:transparent;color:transparent;font-size:0;display:none;opacity:0}
 #winLeft{left:7%} #winRight{right:7%}
 #view{display:none;position:fixed;inset:0;background:#08090c;color:#fff;z-index:100;overflow:auto;padding:18px 14px 50px}
-#view.show{display:block}
+#view.show{display:block} #view.show ~ *{pointer-events:none}
 .panel{max-width:720px;margin:0 auto;background:#111318;border:2px solid #ef2932;border-radius:16px;padding:16px}
 .panel h1{margin:0 0 14px;font-size:26px}
 .back,.action{border:0;border-radius:9px;background:#ef2932;color:#fff;padding:10px 14px;font-weight:900}
@@ -81,7 +81,7 @@ button{font:inherit}
 #tournamentHit{left:66.8%;top:51.15%;width:32.0%;height:6.05%}
 #counterHit{display:none}
 .nextHit{position:absolute;top:44.65%;height:5.9%;border:0;background:transparent;z-index:998;cursor:pointer;touch-action:manipulation}
-#nextRemaining{position:absolute;top:35.1%;right:4.2%;width:27%;height:3%;display:flex;align-items:center;justify-content:flex-end;padding:0 2px;background:#08090c;color:#fff;font-size:clamp(11px,1.9vw,16px);font-weight:500;z-index:1000;pointer-events:none}
+#nextRemaining{position:absolute;top:35.1%;right:4.2%;width:27%;height:3%;display:flex;align-items:center;justify-content:flex-end;padding:0 2px;background:#08090c;color:#fff;font-size:clamp(11px,1.9vw,16px);font-weight:500;z-index:20;pointer-events:none}
 #next1{left:5%;width:28%}#next2{left:36%;width:28%}#next3{left:67%;width:28%}
 .viewHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
 .viewHead h1{margin:0}
